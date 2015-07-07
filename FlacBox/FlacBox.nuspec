@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>FlacBox</id>
+        <version>1.0.0</version>
+        <authors>notmasteryet</authors>
+        <projectUrl>https://flacbox.codeplex.com</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The library allows reading and writing FLAC audio data as WAVE data stream.</description>
+        <summary />
+    </metadata>
+    <files>
+        <file src="bin\Release\FlacBox.dll" target="lib\net35\FlacBox.dll" />
+    </files>
+</package>

@@ -8,7 +8,6 @@ namespace FlacBox
     /// <summary>
     /// Defines restrictions for estimation algorithm.
     /// </summary>
-    [Serializable]
     public sealed class FlacEncodingPolicy
     {
         public IntRange? FixedOrder;
@@ -99,7 +98,6 @@ namespace FlacBox
         TrySidesAndAverage
     }
 
-    [Serializable]
     public struct IntRange
     {
         public int MinValue;

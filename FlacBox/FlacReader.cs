@@ -826,7 +826,7 @@ namespace FlacBox
         {
             if (!disposed)
             {
-                if (!leaveOpen) BaseStream.Close();
+                if (!leaveOpen) BaseStream.Dispose();
                 baseStream = null;
                 disposed = true;
             }

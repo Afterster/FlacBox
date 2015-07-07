@@ -151,7 +151,7 @@ namespace FlacBox
                 FlushBuffer();
 
                 if(!leaveOpen)
-                    baseStream.Close();
+                    baseStream.Dispose();
                 baseStream = null;
                 disposed = true;
             }
@@ -341,7 +341,7 @@ namespace FlacBox
                     frameHeader.WriteByte((byte)(samplesCount - 1));
                     break;
             }
-            frameHeader.Close();
+            frameHeader.Dispose();
 
             byte[] frameHeaderData = frameHeader.ToArray();
 

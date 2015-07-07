@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18FF78B4-8607-4203-ADB8-B45F0D75062A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlacBox</RootNamespace>
+    <AssemblyName>FlacBox.Portable</AssemblyName>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile328</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\sign.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\FlacBox\ArrayUtils.cs" />
+    <Compile Include="..\FlacBox\CrcUtils.cs" />
+    <Compile Include="..\FlacBox\FlacBitStreamReader.cs" />
+    <Compile Include="..\FlacBox\FlacBitStreamWriter.cs" />
+    <Compile Include="..\FlacBox\FlacCommons.cs" />
+    <Compile Include="..\FlacBox\FlacEncodingPolicy.cs" />
+    <Compile Include="..\FlacBox\FlacException.cs" />
+    <Compile Include="..\FlacBox\FlacMethod.cs" />
+    <Compile Include="..\FlacBox\FlacMethodAndDataPair.cs" />
+    <Compile Include="..\FlacBox\FlacOverOggStream.cs" />
+    <Compile Include="..\FlacBox\FlacReader.cs" />
+    <Compile Include="..\FlacBox\FlacResidualCoefficeints.cs" />
+    <Compile Include="..\FlacBox\FlacStreaminfo.cs" />
+    <Compile Include="..\FlacBox\FlacWriter.cs" />
+    <Compile Include="..\FlacBox\FlacWriterEstimator.cs" />
+    <Compile Include="..\FlacBox\IFrameSink.cs" />
+    <Compile Include="..\FlacBox\IPageble.cs" />
+    <Compile Include="..\FlacBox\IPredictor.cs" />
+    <Compile Include="..\FlacBox\LevinsonRecursion.cs" />
+    <Compile Include="..\FlacBox\ParallelExecution.cs" />
+    <Compile Include="..\FlacBox\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\FlacBox\SoundChannelAssignment.cs" />
+    <Compile Include="..\FlacBox\Wave16OverFlacStream.cs" />
+    <Compile Include="..\FlacBox\WaveOverFlacStream.cs" />
+    <Compile Include="..\FlacBox\WaveSampleMixer.cs" />
+    <Compile Include="..\FlacBox\WaveSampleMixerFactory.cs" />
+    <Compile Include="..\FlacBox\WaveSampleTransformer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

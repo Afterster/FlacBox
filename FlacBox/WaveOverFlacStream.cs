@@ -106,15 +106,18 @@ namespace FlacBox
             }
         }
 
+        long _position = 0;
         public override long Position
         {
             get
             {
-                throw new NotImplementedException();
+                return _position;
             }
             set
             {
-                throw new NotImplementedException();
+                //throw new NotImplementedException();
+                // TODO: handle seeking
+                _position = value;
             }
         }
 
@@ -130,12 +133,13 @@ namespace FlacBox
             {
                 Array.Copy(currentData.Array, currentData.Offset, buffer, offset, count);
                 currentData = new ArraySegment<byte>(currentData.Array, currentData.Offset + count, currentData.Count - count);
+                _position += count;
                 return count;
             }
             else
             {
                 int read = currentData.Count;
-                Array.Copy(currentData.Array, currentData.Offset, buffer, offset, currentData.Count);
+                Array.Copy(currentData.Array, currentData.Offset, buffer,  offset, currentData.Count);
                 currentData = NoCurrentData;
 
                 while (dataSource.MoveNext())
@@ -154,6 +158,7 @@ namespace FlacBox
                         read += dataSource.Current.Count;
                     }
                 }
+                _position += read;
                 return read;
             }
         }
@@ -162,7 +167,22 @@ namespace FlacBox
 
         public override long Seek(long offset, SeekOrigin origin)
         {
-            throw new NotImplementedException();
+            switch (origin)
+            {
+                case SeekOrigin.Begin:
+                    Position = offset;
+                    break;
+
+                case SeekOrigin.Current:
+                    Position += offset;
+                    break;
+
+                case SeekOrigin.End:
+                    Position = Length + offset;
+                    break;
+            }
+
+            return Position;
         }
 
         public override void SetLength(long value)
@@ -181,6 +201,8 @@ namespace FlacBox
             dataConsumer.Current.Count = count;
 
             dataConsumer.MoveNext();
+
+            _position += count;
         }
 
         bool disposed = false;

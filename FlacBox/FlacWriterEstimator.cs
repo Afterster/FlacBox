@@ -252,9 +252,11 @@ namespace FlacBox
                 const int ExtendedPrecision = 5;
                 const int MinValueForExtendedParameters = 15;
 
-                bool isExtended = Array.Exists(parameters, delegate(int x) {
-                    return x >= MinValueForExtendedParameters;
-                });
+                bool isExtended = false;
+                for (int i = 0; i < parameters.Length && !isExtended; ++i)
+                {
+                    isExtended = parameters[i] >= MinValueForExtendedParameters;
+                }
 
                 int totalSize = 4 + totalPartitionDataSize +
                     partitionCount * (isExtended ? ExtendedPrecision : NormalPrecision);
