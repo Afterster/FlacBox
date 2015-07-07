@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlacBox", "FlacBox\FlacBox.csproj", "{FD63DD61-E78E-430F-8E4A-2D9FBBDFA611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlacTranscode", "FlacTranscode\FlacTranscode.csproj", "{9DF0FE7E-6904-44B3-9EE2-7B111DCDE801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundPlayerDemo", "SoundPlayerDemo\SoundPlayerDemo.csproj", "{9583D54E-D1F2-4211-B924-832EFA1A6858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlacBox.CdromUtils", "FlacBox.CdromUtils\FlacBox.CdromUtils.csproj", "{0B5E0849-9237-4FDA-86ED-F9D13807CFE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlacBoxRip", "FlacBoxRip\FlacBoxRip.csproj", "{F7B06F80-2B61-4207-B7A6-010AC826DBAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD63DD61-E78E-430F-8E4A-2D9FBBDFA611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD63DD61-E78E-430F-8E4A-2D9FBBDFA611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD63DD61-E78E-430F-8E4A-2D9FBBDFA611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD63DD61-E78E-430F-8E4A-2D9FBBDFA611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF0FE7E-6904-44B3-9EE2-7B111DCDE801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF0FE7E-6904-44B3-9EE2-7B111DCDE801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF0FE7E-6904-44B3-9EE2-7B111DCDE801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF0FE7E-6904-44B3-9EE2-7B111DCDE801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9583D54E-D1F2-4211-B924-832EFA1A6858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9583D54E-D1F2-4211-B924-832EFA1A6858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9583D54E-D1F2-4211-B924-832EFA1A6858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9583D54E-D1F2-4211-B924-832EFA1A6858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5E0849-9237-4FDA-86ED-F9D13807CFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5E0849-9237-4FDA-86ED-F9D13807CFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5E0849-9237-4FDA-86ED-F9D13807CFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5E0849-9237-4FDA-86ED-F9D13807CFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B06F80-2B61-4207-B7A6-010AC826DBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B06F80-2B61-4207-B7A6-010AC826DBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B06F80-2B61-4207-B7A6-010AC826DBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B06F80-2B61-4207-B7A6-010AC826DBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
